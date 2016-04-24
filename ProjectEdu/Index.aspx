@@ -15,7 +15,7 @@
             $('#btnAcceder').click(function () {
                 var nick = $('#txtUser').val();
                 var pwd = $('#txtPass').val();
-             //   alert("hey");
+               // alert("hey");
                 MiFuncionObj(nick, pwd);
             });
         });
@@ -26,7 +26,7 @@
             }
             var actiondata = JSON.stringify(obJason);
             //var actiondata = obJason;
-            // alert("listen");
+             //alert("listen");
             $.ajax(
                 {
                     url: "http://localhost/ProjectEdu/WebService.asmx/SetSession",
@@ -35,7 +35,7 @@
                     type: "POST",
                     contentType: "application/json; charset=utf-8",
                     success: function (msg) {
-                     //   alert(msg.d.idUser);
+                 //       alert(msg.d.idUser);
                         if (msg.d.Identificador != 0) {
                             alert("Bienvendio usuario! Buen Dia!");
                             window.location.replace  ("http://localhost/ProjectEdu/lol.aspx");
